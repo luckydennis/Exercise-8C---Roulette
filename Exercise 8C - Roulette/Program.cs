@@ -105,6 +105,87 @@ namespace Exercise_8C___Roulette
                             Console.WriteLine($"you lost ball landed on {numWheel[rInt]}");
 
                         break;
+                    case 5:
+                        Console.WriteLine("row 1 or row 2 or row 3");
+                        betNum = int.Parse(Console.ReadLine());
+                        Console.WriteLine("How much do you want to bet?");
+                        amount = int.Parse(Console.ReadLine());
+                        if(landNum>=1 && landNum<=12 && betNum == 1)
+                        {
+                            Console.WriteLine($"You Win landed on {numWheel[rInt]}");
+                        }
+                        if(landNum>=13 && landNum<=24 && betNum == 2)
+                        {
+                            Console.WriteLine($"You Win landed on {numWheel[rInt]}");
+                        }
+                        if(landNum>=25 && landNum<=36 && betNum == 3)
+                        {
+                            Console.WriteLine($"You Win landed on {numWheel[rInt]}");
+                        } 
+                        else
+                            Console.WriteLine($"you lost ball landed on {numWheel[rInt]}");
+
+                        break;
+                    case 6:
+                        Console.WriteLine("choose col 1 or col 2 or col 3");
+                        betNum = int.Parse(Console.ReadLine());
+                        Console.WriteLine("How much do you want to bet?");
+                        amount = int.Parse(Console.ReadLine());
+
+                        while (betNum < 36)
+                        {
+                            if (landNum == betNum)
+                            {
+                                Console.WriteLine($"You Win landed on {numWheel[rInt]}");
+                                break;
+                            }
+                            betNum += 3;
+                        }
+                            if(landNum!=betNum)
+                                Console.WriteLine($"you lost ball landed on {numWheel[rInt]}");
+                        break;
+
+                    case 7:
+                        Console.WriteLine("choose a row 1/4/7/10/13/16/19/22/25/28/31/34");
+                        betNum = int.Parse(Console.ReadLine());
+                        Console.WriteLine("How much do you want to bet?");
+                        amount = int.Parse(Console.ReadLine());
+
+                        int tempd = betNum + 3;
+                        while(betNum<= tempd)
+                        {
+                            if(landNum == betNum)
+                            {
+                                 Console.WriteLine($"You Win landed on {numWheel[rInt]}");
+                                break;
+                            }
+                            betNum += 1;
+                        }
+                            if(landNum!=betNum)
+                                Console.WriteLine($"you lost ball landed on {numWheel[rInt]}");
+                        break;
+                    case 8:
+                        Console.WriteLine("choose a double row:1 4 /4 7/ 7 10/ 13 16/ 19 22/ ");
+                        Console.WriteLine("choose a row 1/4/7/10/13/16/19/22/25/28/31/34");
+                        betNum = int.Parse(Console.ReadLine());
+                        Console.WriteLine("How much do you want to bet?");
+                        amount = int.Parse(Console.ReadLine());
+
+                        int tempx= betNum + 5;
+                        while(betNum<= tempx)
+                        {
+                            if(landNum == betNum)
+                            {
+                                 Console.WriteLine($"You Win landed on {numWheel[rInt]}");
+                                break;
+                            }
+                            betNum += 1;
+                        }
+                            if(landNum!=betNum)
+                                Console.WriteLine($"you lost ball landed on {numWheel[rInt]}");
+                        break;
+
+
                 }
 
                 
